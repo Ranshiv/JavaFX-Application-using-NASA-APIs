@@ -89,6 +89,11 @@ public class Controller {
     @FXML
     private void openSearchView() throws IOException {
         System.out.println("openSearchView");
+        if (primaryStage == null) {
+            System.err.println("Primary stage is not set!");
+            return;
+        }
+
         // Load the search view
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Search.fxml"));
         Parent root = loader.load();

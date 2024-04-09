@@ -1,0 +1,9 @@
+.table-view {
+    -fx-font-family: "OCR A Extended";
+    -fx-font-size: 14px;
+}
+.anchor-pane {
+    -fx-background-image: url("space_background_1.jpg");
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+}
