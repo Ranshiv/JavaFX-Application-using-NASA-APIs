@@ -1,3 +1,10 @@
+/*
+Name -> Ranshiv Kumar
+Student id -> 200555490
+Purpose -> Assignment 2
+Date -> 8-April-2024
+ */
+
 package org.example.nasa;
 
 import javafx.application.Application;
@@ -25,7 +32,7 @@ public class Main extends Application {
         // Set the primaryStage for the controller
         Controller controller = loader.getController();
         controller.setPrimaryStage(primaryStage);
-//        scene.getStylesheets().add(getClass().getResource("/org/example/nasa/styles.css").toExternalForm());
+        scene.getStylesheets().add(getClass().getResource("/org/example/nasa/styles.css").toExternalForm());
         controller.openSearchView();
         primaryStage.setMinWidth(950);
         primaryStage.setMinHeight(600);
@@ -37,6 +44,7 @@ public class Main extends Application {
 
         // Set application icon
         try {
+//            TO set the icon for the window
             InputStream iconStream = getClass().getResourceAsStream("/images/nasa.jpg");
             if (iconStream != null) {
                 Image icon = new Image(iconStream);
@@ -50,11 +58,13 @@ public class Main extends Application {
 
         StackPane root = new StackPane();
         primaryStage.setScene(scene);
-
+//        To disable the maximize button in the GUI Window
         primaryStage.setResizable(false);
         primaryStage.show();
 
         System.out.println("Primary Stage is successfully shown");
+
+// Video Embedment
 
 //
 //        try {

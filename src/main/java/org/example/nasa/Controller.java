@@ -1,3 +1,10 @@
+/*
+Name -> Ranshiv Kumar
+Student id -> 200555490
+Purpose -> Assignment 2
+Date -> 8- April-2024
+ */
+
 package org.example.nasa;
 
 import com.google.gson.JsonElement;
@@ -27,6 +34,7 @@ import javafx.stage.Stage;
 
 public class Controller {
 
+    //    Variables for Tableview and Tablecolumn components present in FXML (To help make connection of Java with FXML)
     @FXML
     private TableView<Star> tableView;
     @FXML
@@ -46,6 +54,8 @@ public class Controller {
         this.primaryStage = primaryStage;
     }
 
+//    Initialized Method -> That will connect Java to API and will fetch the data from it
+
     public void initialize() {
         System.out.println("Controller initialized");
         nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
@@ -54,6 +64,7 @@ public class Controller {
         distanceLightYearColumn.setCellValueFactory(new PropertyValueFactory<>("distanceLightYear"));
         spectralClassColumn.setCellValueFactory(new PropertyValueFactory<>("spectralClass"));
 
+//        Try and Catch block
         try {
             String apiKey = "3zFgutiJYlvLIjJv0r5TgA==NgW7vEftZCNAOoQ4";
             URL url = new URL("https://api.api-ninjas.com/v1/stars?name=Kepler");
@@ -64,15 +75,18 @@ public class Controller {
 
             BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
             StringBuilder response = new StringBuilder();
+//            Accepting response code from the API
             int responseCode = connection.getResponseCode();
+//            If response code is equal to 200
             if (responseCode == HttpURLConnection.HTTP_OK) {
                 String line;
                 while ((line = reader.readLine()) != null) {
                     response.append(line);
                 }
             }
-
+//Parsing JSON Response
             JsonArray jsonArray = JsonParser.parseString(response.toString()).getAsJsonArray();
+//            For loop to store the parsed data into an array
             for (JsonElement element : jsonArray) {
                 JsonObject starObject = element.getAsJsonObject();
                 tableView.getItems().add(new Star(
@@ -87,6 +101,7 @@ public class Controller {
             e.printStackTrace();
         }
     }
+
     @FXML
     public void openSearchView() throws IOException {
         System.out.println("Search Interface initiated");
@@ -110,7 +125,6 @@ public class Controller {
         primaryStage.setScene(scene);
         primaryStage.show();
     }
-
 
 
 }

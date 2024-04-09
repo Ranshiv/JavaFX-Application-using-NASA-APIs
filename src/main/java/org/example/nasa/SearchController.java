@@ -1,3 +1,9 @@
+/*
+Name -> Ranshiv Kumar
+Student id -> 200555490
+Purpose -> Assignment 2
+ */
+
 package org.example.nasa;
 
 import com.google.gson.JsonArray;
@@ -63,6 +69,7 @@ public class SearchController {
         }
     }
 
+//    To display error notification if the desired keyword is not found
     private void showErrorNotification(String title, String message) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle(title);
@@ -105,12 +112,13 @@ public class SearchController {
                 ));
             }
         } catch (Exception e) {
+//            To display the exception if found one
             e.printStackTrace();
         }
 
         return stars; // Return an empty list if no data is fetched
     }
-
+//clear label
     private void clearLabels() {
         nameLabel.setText("");
         apparentMagnitudeLabel.setText("");
@@ -119,6 +127,7 @@ public class SearchController {
         spectralClassLabel.setText("");
     }
 
+//    Method to return to home screen
     @FXML
     private void returnToHomeScreen() throws IOException {
         System.out.println("Returning to home screen");
