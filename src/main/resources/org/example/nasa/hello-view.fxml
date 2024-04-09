@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="535.0" prefWidth="811.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="org.example.nasa.Controller">
+
+  <children>
+    <Label fx:id="nameLabel" layoutX="100.0" layoutY="50.0" />
+    <Label fx:id="apparentMagnitudeLabel" layoutX="100.0" layoutY="70.0" />
+    <Label fx:id="absoluteMagnitudeLabel" layoutX="100.0" layoutY="90.0" />
+    <Label fx:id="distanceLightYearLabel" layoutX="100.0" layoutY="120.0" />
+    <Label fx:id="spectralClassLabel" layoutX="100.0" layoutY="160.0" />
+    <!--    <TextField fx:id="searchField" layoutX="100.0" layoutY="460.0" prefHeight="30.0" prefWidth="400.0" />-->
+    <Button layoutX="295.0" layoutY="465.0" onAction="#openSearchView" style="-fx-font-size: 26px;" text="Click To SEARCH" />
+
+    <TableView fx:id="tableView" layoutX="101.0" layoutY="50.0" prefHeight="400.0" prefWidth="614.0">
+      <columns>
+        <TableColumn fx:id="nameColumn" text="Name" />
+        <TableColumn fx:id="apparentMagnitudeColumn" text="Apparent Magnitude" />
+        <TableColumn fx:id="absoluteMagnitudeColumn" text="Absolute Magnitude" />
+        <TableColumn fx:id="distanceLightYearColumn" text="Distance Light Year" />
+        <TableColumn fx:id="spectralClassColumn" text="Spectral Class" />
+      </columns>
+    </TableView>
+
+  </children>
+</AnchorPane>
