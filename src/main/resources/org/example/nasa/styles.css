@@ -1,9 +1,17 @@
 .table-view {
-    -fx-font-family: "OCR A Extended";
+    -fx-font-family: "Consolas";
     -fx-font-size: 14px;
+    -fx-background-color: transparent;
 }
 .anchor-pane {
     -fx-background-image: url("space_background_1.jpg");
     -fx-background-size: cover;
     -fx-background-repeat: no-repeat;
+}
+Label#Header1{
+    -fx-text-fill: white;
+}
+TableView#tableView{
+    -fx-background-color: transparent;
+    -fx-opacity: 0.5;
 }
