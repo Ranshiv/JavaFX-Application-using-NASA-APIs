@@ -9,3 +9,5 @@
   <li>Distance in Light Years from Earth</li>
   <li>Spectaral Class (Because Stars are bascially defined in 7 classes in Astrophysics)</li>
 </h3>
+
+<img  src="https://github.com/Ranshiv/JavaFX-Application-using-NASA-APIs/assets/126970975/623de188-9a9b-4791-becc-762ac4139af9" />
