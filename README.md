@@ -11,3 +11,5 @@
 </h3>
 
 <img  src="https://github.com/Ranshiv/JavaFX-Application-using-NASA-APIs/assets/126970975/623de188-9a9b-4791-becc-762ac4139af9" />
+<h3>If user puts wrong keyword into the search bar then, the user will be displayed with an error notification</h3>
+<img src="https://github.com/Ranshiv/JavaFX-Application-using-NASA-APIs/assets/126970975/85227b6a-566d-4e14-b4c0-2661bedb7de2" />
