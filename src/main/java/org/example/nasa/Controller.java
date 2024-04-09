@@ -47,6 +47,7 @@ public class Controller {
     }
 
     public void initialize() {
+        System.out.println("Controller initialized");
         nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
         apparentMagnitudeColumn.setCellValueFactory(new PropertyValueFactory<>("apparentMagnitude"));
         absoluteMagnitudeColumn.setCellValueFactory(new PropertyValueFactory<>("absoluteMagnitude"));
@@ -87,8 +88,8 @@ public class Controller {
         }
     }
     @FXML
-    private void openSearchView() throws IOException {
-        System.out.println("openSearchView");
+    public void openSearchView() throws IOException {
+        System.out.println("Search Interface initiated");
         if (primaryStage == null) {
             System.err.println("Primary stage is not set!");
             return;

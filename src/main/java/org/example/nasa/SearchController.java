@@ -43,6 +43,7 @@ public class SearchController {
 
     @FXML
     private void handleSearchButton() {
+        System.out.println("Button is pressed and the user wants Information for " + searchField.getText());
         // Fetch data based on search text
         String searchText = searchField.getText();
         List<Star> stars = fetchDataFromAPI(searchText);
@@ -74,6 +75,7 @@ public class SearchController {
         List<Star> stars = new ArrayList<>();
 
         try {
+            System.out.println("Fetching data from API in Search Controller");
             // Make an API request using the search text
             String apiKey = "3zFgutiJYlvLIjJv0r5TgA==NgW7vEftZCNAOoQ4";
             String apiUrl = "https://api.api-ninjas.com/v1/stars?name=" + searchText;
@@ -119,6 +121,7 @@ public class SearchController {
 
     @FXML
     private void returnToHomeScreen() throws IOException {
+        System.out.println("Returning to home screen");
         // Load the home screen FXML file
          FXMLLoader loader = new FXMLLoader(getClass().getResource("hello-view.fxml"));
          Parent root = loader.load();

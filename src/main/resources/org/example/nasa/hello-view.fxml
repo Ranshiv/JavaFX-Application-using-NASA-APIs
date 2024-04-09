@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="535.0" prefWidth="902.0" style="-fx-background-image: url('https://cdn.pixabay.com/photo/2014/12/27/16/38/planet-581239_1280.jpg'); -fx-background-color: red;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.nasa.Controller">
+<AnchorPane prefHeight="535.0" prefWidth="902.0" style="-fx-background-image: url('https://cdn.pixabay.com/photo/2014/12/27/16/38/planet-581239_1280.jpg');" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.nasa.Controller">
 
   <children>
     <Label fx:id="nameLabel" layoutX="100.0" layoutY="50.0" />
@@ -16,9 +16,12 @@
     <Label fx:id="distanceLightYearLabel" layoutX="100.0" layoutY="120.0" />
     <Label fx:id="spectralClassLabel" layoutX="100.0" layoutY="160.0" />
     <!--    <TextField fx:id="searchField" layoutX="100.0" layoutY="460.0" prefHeight="30.0" prefWidth="400.0" />-->
-    <Button layoutX="339.0" layoutY="465.0" onAction="#openSearchView" style="-fx-font-size: 26px;" text="Click To SEARCH" />
+    <Button layoutX="339.0" layoutY="465.0" onAction="#openSearchView" style="-fx-font-size: 26px; -fx-background-color: #272F40;" text="Click To SEARCH" textFill="WHITE">
+      <font>
+        <Font name="Space Mono Regular" size="12.0" />
+      </font></Button>
 
-    <TableView fx:id="tableView" layoutX="43.0" layoutY="50.0" prefHeight="400.0" prefWidth="816.0">
+    <TableView fx:id="tableView" layoutX="43.0" layoutY="50.0" prefHeight="400.0" prefWidth="816.0" style="-fx-background-color: #201F41;">
       <columns>
         <TableColumn fx:id="nameColumn" prefWidth="140.0" text="Name" />
         <TableColumn fx:id="apparentMagnitudeColumn" prefWidth="168.0" text="Apparent Magnitude" />
@@ -27,9 +30,9 @@
         <TableColumn fx:id="spectralClassColumn" prefWidth="149.0" text="Spectral Class" />
       </columns>
     </TableView>
-    <Label layoutX="268.0" layoutY="14.0" text="NASA CELESTIAL OBJECTS FINDER">
+    <Label layoutX="240.0" layoutY="9.0" text="NASA CELESTIAL OBJECTS FINDER" textFill="WHITE">
       <font>
-        <Font name="Calibri" size="27.0" />
+        <Font name="Space Mono Regular" size="27.0" />
       </font>
     </Label>
 

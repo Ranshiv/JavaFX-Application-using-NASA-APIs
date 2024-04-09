@@ -26,7 +26,7 @@ public class Main extends Application {
         Controller controller = loader.getController();
         controller.setPrimaryStage(primaryStage);
 //        scene.getStylesheets().add(getClass().getResource("/org/example/nasa/styles.css").toExternalForm());
-
+        controller.openSearchView();
         primaryStage.setMinWidth(950);
         primaryStage.setMinHeight(600);
         primaryStage.setMaxWidth(950);
@@ -50,8 +50,11 @@ public class Main extends Application {
 
         StackPane root = new StackPane();
         primaryStage.setScene(scene);
+
+        primaryStage.setResizable(false);
         primaryStage.show();
 
+        System.out.println("Primary Stage is successfully shown");
 
 //
 //        try {
